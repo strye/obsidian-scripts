@@ -1,4 +1,4 @@
-# obsidian-md-extensions
+# obsidian-scripts
  
 This is a plugin for Obsidian (https://obsidian.md) that helps you write and work with screenplays.
 
@@ -7,10 +7,10 @@ This is a plugin for Obsidian (https://obsidian.md) that helps you write and wor
 See https://github.com/obsidianmd/obsidian-api
 
 ## Features
-- [?] Create file from template
-- [ ] Parenthetical auto-fromatter
 - [ ] Frontmatter builder
 - [ ] Exporter
+- [?] Create file from template
+- [X] Parenthetical fromatter (command to strikethrough line)
 - [X] styling & formatting
 - [X] Transition suggester
 - [X] Parenthetical suggester

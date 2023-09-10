@@ -1,4 +1,12 @@
-.spmd, .csmd {
+.msmd, .spmd, .csmd {
+	--black_raw: 0, 0, 0;
+	--white_raw: 217, 217, 217;
+	--lt_purple_raw: 168, 137, 233;
+	--lt_blue_raw: 158, 189, 225;
+	--sotd_red_raw: 132,0,18;
+	--cb_slate_raw: 92,100,114;
+
+
 	/* --test_color: rgb(137, 80, 181); */
 	--drk: rgb(38,38,42);
 	--lite: rgb(207, 214, 222);
@@ -52,8 +60,6 @@
 	--h6-style: italic;
 	--h6-variant: small-caps;
 
-
-
 	
 	color: var(--text);
 	--font-text: var(--font-monospace);
@@ -70,27 +76,32 @@
 	/*** Panel Marker ***/
 	--h2-color: var(--sotd_mustard);
 	--h2-size: 1.2em;
-
 }
 
 
 /***********************************************/
-/*** SPMD & CSMD Styles ***********************/
+/*** MSMD, SPMD, & CSMD Styles ****************/
 /*********************************************/
 
 /*** reset headers ***/
-.csmd .HyperMD-header-1:after, .markdown-preview-view h1:after,
-.csmd .HyperMD-header-2:after, .markdown-preview-view h2:after,
-.csmd .HyperMD-header-3:after, .markdown-preview-view h3:after,
-.csmd .HyperMD-header-4:after, .markdown-preview-view h4:after,
-.csmd .HyperMD-header-5:after, .markdown-preview-view h5:after,
-.csmd .HyperMD-header-6:after, .markdown-preview-view h6:after,
-.spmd .HyperMD-header-1:after, .markdown-preview-view h1:after,
-.spmd .HyperMD-header-2:after, .markdown-preview-view h2:after,
-.spmd .HyperMD-header-3:after, .markdown-preview-view h3:after,
-.spmd .HyperMD-header-4:after, .markdown-preview-view h4:after,
-.spmd .HyperMD-header-5:after, .markdown-preview-view h5:after,
-.spmd .HyperMD-header-6:after, .markdown-preview-view h6:after {
+.msmd .HyperMD-header-1:after, .msmd .markdown-preview-view h1:after,
+.msmd .HyperMD-header-2:after, .msmd .markdown-preview-view h2:after,
+.msmd .HyperMD-header-3:after, .msmd .markdown-preview-view h3:after,
+.msmd .HyperMD-header-4:after, .msmd .markdown-preview-view h4:after,
+.msmd .HyperMD-header-5:after, .msmd .markdown-preview-view h5:after,
+.msmd .HyperMD-header-6:after, .msmd .markdown-preview-view h6:after,
+.csmd .HyperMD-header-1:after, .csmd .markdown-preview-view h1:after,
+.csmd .HyperMD-header-2:after, .csmd .markdown-preview-view h2:after,
+.csmd .HyperMD-header-3:after, .csmd .markdown-preview-view h3:after,
+.csmd .HyperMD-header-4:after, .csmd .markdown-preview-view h4:after,
+.csmd .HyperMD-header-5:after, .csmd .markdown-preview-view h5:after,
+.csmd .HyperMD-header-6:after, .csmd .markdown-preview-view h6:after,
+.spmd .HyperMD-header-1:after, .spmd .markdown-preview-view h1:after,
+.spmd .HyperMD-header-2:after, .spmd .markdown-preview-view h2:after,
+.spmd .HyperMD-header-3:after, .spmd .markdown-preview-view h3:after,
+.spmd .HyperMD-header-4:after, .spmd .markdown-preview-view h4:after,
+.spmd .HyperMD-header-5:after, .spmd .markdown-preview-view h5:after,
+.spmd .HyperMD-header-6:after, .spmd .markdown-preview-view h6:after {
 	display: none;
 }
 
@@ -140,6 +151,7 @@
 /*** Dialog Letter Note ~ [^Ltr]: ***/
 /*** Script Note ~ [^|]: ***/
 /*** Script Note ~ [^|]:, [^Art]:, [^Ltr]: ***/
+.msmd .cm-content .HyperMD-footnote,
 .csmd .cm-content .HyperMD-footnote,
 .spmd .cm-content .HyperMD-footnote {
 	padding-left: 42px !important;
@@ -151,18 +163,90 @@
 
 
 /*** Personal Note ~ %%...%% ***/
+.msmd .cm-line:has(.cm-comment),
 .csmd .cm-line:has(.cm-comment),
 .spmd .cm-line:has(.cm-comment) {
 	padding-left: 75px !important;
 }
+.msmd .cm-line .cm-comment:not(.cm-comment-start, .cm-comment-end),
 .csmd .cm-line .cm-comment:not(.cm-comment-start, .cm-comment-end),
 .spmd .cm-line .cm-comment:not(.cm-comment-start, .cm-comment-end) {
 	color: var(--sp_comment);
 }
+.msmd .cm-line .cm-comment-start, .spmd .cm-line .cm-comment-end,
 .csmd .cm-line .cm-comment-start, .spmd .cm-line .cm-comment-end,
 .spmd .cm-line .cm-comment-start, .spmd .cm-line .cm-comment-end {
 	color: var(--sp_comment-block);
 }
+
+
+
+
+/***********************************************/
+/*** MSMD Styles ******************************/
+/*********************************************/
+.msmd {
+	/*** HEADER STYLES ***/
+	--h1-color: rgba(var(--lt_blue_raw), 0.80);
+	--h1-size: 1.4em;
+	--h1-variant: small-caps;
+
+	--h2-color: rgba(var(--lt_blue_raw), 0.75);
+	--h2-size: 1.3em;
+	--h2-variant: small-caps;
+
+	--h3-color: rgba(var(--lt_blue_raw), 0.70);
+	--h3-size: 1.1em;
+	
+	--h4-color: rgba(var(--lt_blue_raw), 0.65);
+	--h4-style: italic;
+
+	--h5-color: rgba(var(--lt_blue_raw), 0.65);
+	--h5-variant: small-caps;
+}
+
+.msmd .HyperMD-header-1:after, .msmd h1:after {
+	content: " ";
+	display: block;
+	position: relative;
+	height: 4px;
+	margin-top: 2px;
+	margin-bottom: 42px;
+	background: rgba(var(--lt_blue_raw), 0.80);
+	width: 100%;
+}
+.msmd .HyperMD-header-2:after, .msmd h2:after {
+	content: " ";
+	display: block;
+	position: relative;
+	height: 3px;
+	margin-top: 2px;
+	background: linear-gradient(to right, rgba(var(--lt_blue_raw), 0.84) 0 75%, rgba(var(--cb_slate_raw), 0.36));
+	width: 100%;
+}
+.msmd .HyperMD-header-2, .msmd h2 {
+	padding-top: 42px !important;
+}
+.msmd .HyperMD-header-3, .msmd .markdown-preview-view h3 {
+	text-align: center !important;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+.msmd .HyperMD-header-4, .msmd .markdown-preview-view h4 {
+	text-transform: uppercase;
+}
+.msmd .HyperMD-header-5:after, .msmd .markdown-preview-view h5:after {
+	content: " ";
+	display: block;
+	position: relative;
+	height: 2px;
+	background: linear-gradient(to right, rgba(var(--lt_blue_raw), 0.15) 0 30%, rgba(var(--lt_blue_raw), 0.84) 50%, rgba(var(--lt_blue_raw), 0.15));
+	width: 100%;
+}
+.msmd .HyperMD-header-5, .msmd .markdown-preview-view h5 {
+	text-align: center !important;
+}
+
 
 
 

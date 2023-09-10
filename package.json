@@ -1,6 +1,6 @@
 {
   "name": "obsidian-wpmd",
-  "version": "1.0.0",
+  "version": "0.8.0",
   "description": "Obsidian plugin for writing and working with scripts such as screenplays and comic scripts.",
   "main": "main.js",
   "scripts": {

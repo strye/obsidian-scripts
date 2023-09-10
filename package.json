@@ -1,0 +1,15 @@
+{
+  "name": "obsidian-wpmd",
+  "version": "1.0.0",
+  "description": "Obsidian plugin for writing and working with scripts such as screenplays and comic scripts.",
+  "main": "main.js",
+  "scripts": {
+    "build": "rollup --config",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Strye",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup-plugin-copy": "^3.5.0"
+  }
+}

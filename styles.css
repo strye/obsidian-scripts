@@ -1,0 +1,220 @@
+.spmd, .csmd {
+	/* --test_color: rgb(137, 80, 181); */
+	--drk: rgb(38,38,42);
+	--lite: rgb(207, 214, 222);
+	--lt_blue: rgb(158, 189, 225);
+	--lt_purple: rgb(168, 137, 233);
+	--sw_violet: rgb(134,117,138);
+	--sotd_gray: rgb(112,109,109);
+	--sotd_mustard: rgb(139,123,37);
+	--cb_slate: rgb(92,100,114);
+
+
+	--text: var(--light);
+	--sp_heading: var(--lt_blue);
+	--sp_note: var(--sw_violet);
+	--sp_character: var(--lt_purple);
+	--sp_comment: var(--sotd_gray);
+	--sp_comment-block: var(--drk);
+
+	/*** HEADER STYLES ***/
+	/* Scene Transition */
+	--h1-color: var(--sp_heading);
+	--h1-size: 1.0em;
+	--h1-font: var(--font-monospace);
+
+	/* Slugline */
+	--h2-color: var(--sp_heading);
+	--h2-size: 1.0em;
+	--h2-font: var(--font-monospace);
+
+	/* x */
+	--h3-color: var(--text);
+	--h3-size: 1.0em;
+	--h3-font: var(--font-monospace);
+	--h3-variant: normal;
+
+	/* x */
+	--h4-color: var(--text);
+	--h4-size: 1.0em;
+	--h4-font: var(--font-monospace);
+	--h4-style: none;
+
+	/* x */
+	--h5-color: var(--text);
+	--h5-size: 1.0em;
+	--h5-font: var(--font-monospace);
+
+	/* x */
+	--h6-color: var(--sp_note);
+	--h6-size: 1.0em;
+	--h6-font: var(--font-monospace);
+	--h6-style: italic;
+	--h6-variant: small-caps;
+
+
+
+	
+	color: var(--text);
+	--font-text: var(--font-monospace);
+	/* --font-text: "MonospaceTypewriter", "Underwood Champion", "Consolas" !important; */
+	/* --font-text: "Underwood Champion", "Consolas" !important; */
+
+}
+.csmd {
+	/*** HEADER STYLES ***/
+	/*** Page Marker ***/
+	--h1-color: var(--cb_slate);
+	--h1-size: 1.3em;
+
+	/*** Panel Marker ***/
+	--h2-color: var(--sotd_mustard);
+	--h2-size: 1.2em;
+
+}
+
+
+/***********************************************/
+/*** SPMD & CSMD Styles ***********************/
+/*********************************************/
+
+/*** reset headers ***/
+.csmd .HyperMD-header-1:after, .markdown-preview-view h1:after,
+.csmd .HyperMD-header-2:after, .markdown-preview-view h2:after,
+.csmd .HyperMD-header-3:after, .markdown-preview-view h3:after,
+.csmd .HyperMD-header-4:after, .markdown-preview-view h4:after,
+.csmd .HyperMD-header-5:after, .markdown-preview-view h5:after,
+.csmd .HyperMD-header-6:after, .markdown-preview-view h6:after,
+.spmd .HyperMD-header-1:after, .markdown-preview-view h1:after,
+.spmd .HyperMD-header-2:after, .markdown-preview-view h2:after,
+.spmd .HyperMD-header-3:after, .markdown-preview-view h3:after,
+.spmd .HyperMD-header-4:after, .markdown-preview-view h4:after,
+.spmd .HyperMD-header-5:after, .markdown-preview-view h5:after,
+.spmd .HyperMD-header-6:after, .markdown-preview-view h6:after {
+	display: none;
+}
+
+.csmd .markdown-source-view .cm-content .cm-line,
+.spmd .markdown-source-view .cm-content .cm-line {
+	text-align: left;
+}
+
+
+/*** Dialog ~ base formatting for quote block ***/
+.csmd .HyperMD-quote,
+.spmd .HyperMD-quote {
+	padding-left: 150px !important;
+	padding-bottom: 0.42em !important;
+	padding-right: 150px !important;
+	text-align: left;
+}
+.csmd .HyperMD-quote::before,
+.spmd .HyperMD-quote::before {
+	border-left: 0px !important;
+}
+
+/*** Character Cues ~ '>' ***/
+.csmd .HyperMD-quote:has(.cm-formatting-quote),
+.spmd .HyperMD-quote:has(.cm-formatting-quote) {
+	text-indent: 100px !important;
+	color: var(--sp_character);
+	padding-bottom: 0 !important;
+	padding-top: 0.84em !important;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/*** Parentheticals ~ strikethrough '*-*' ***/
+.csmd .HyperMD-quote:has(.cm-strikethrough),
+.spmd .HyperMD-quote:has(.cm-strikethrough) {
+	text-indent: 50px !important;
+}
+.csmd .HyperMD-quote .cm-strikethrough,
+.spmd .HyperMD-quote .cm-strikethrough {
+	text-decoration: none !important;
+	text-transform: uppercase;
+}
+
+
+/*** Artist Note ~ [^Art]: ***/
+/*** Dialog Letter Note ~ [^Ltr]: ***/
+/*** Script Note ~ [^|]: ***/
+/*** Script Note ~ [^|]:, [^Art]:, [^Ltr]: ***/
+.csmd .cm-content .HyperMD-footnote,
+.spmd .cm-content .HyperMD-footnote {
+	padding-left: 42px !important;
+	color: var(--sp_note);
+	font-size: 1em;
+	font-style: italic !important;
+	font-variant: small-caps;
+}
+
+
+/*** Personal Note ~ %%...%% ***/
+.csmd .cm-line:has(.cm-comment),
+.spmd .cm-line:has(.cm-comment) {
+	padding-left: 75px !important;
+}
+.csmd .cm-line .cm-comment:not(.cm-comment-start, .cm-comment-end),
+.spmd .cm-line .cm-comment:not(.cm-comment-start, .cm-comment-end) {
+	color: var(--sp_comment);
+}
+.csmd .cm-line .cm-comment-start, .spmd .cm-line .cm-comment-end,
+.spmd .cm-line .cm-comment-start, .spmd .cm-line .cm-comment-end {
+	color: var(--sp_comment-block);
+}
+
+
+
+
+/***********************************************/
+/*** SPMD Styles ******************************/
+/*********************************************/
+
+/*** Screenplay Transitions ~ # ***/
+.spmd .HyperMD-header-1.cm-line, .markdown-preview-view h1 {
+	text-align: right !important;
+	text-transform: uppercase;
+}
+
+
+/*** Slug Lines ~ ## ***/
+.spmd .HyperMD-header-2.cm-line, .markdown-preview-view h2 {
+	text-transform: uppercase;
+}
+/*** Subheaders ~ ## (same as sluglines) ***/
+
+/*** Action Lines ~ normal line ***/
+
+/*** Shots ~ (capatlized inline) look at using highlights? ***/
+/*** Montage ~ ## (format as subheader. Open and close with 
+					BEGIN MONTAGE: and END MONTAGE. ***/
+/*** Lyrics ~ no special formatting ***/
+/*** Chyrons ~ begin with either 'CHYRON: ' or TITLE: ' then text ***/
+
+/*** End of Act ~ ### Mainly for television to indicate commercial breaks ***/
+.spmd .HyperMD-header-3.cm-line, .markdown-preview-view h3 {
+	text-align: center !important;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+
+
+/***********************************************/
+/*** CSMD Styles ******************************/
+/*********************************************/
+
+/*** Page Marker # ***/
+.csmd .HyperMD-header-1:before, .markdown-preview-view h1:before {
+	content: " ";
+	display: block;
+	position: relative;
+	margin-bottom: 16px;
+	height: 2px;
+	background: var(--h1-color);
+	width: 100%;
+}
+
+/*** Panel Marker ~ ## ***/
+/*** Panael Description ~ Normal Text ***/

@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-scripts",
+	"name": "Script Markdown",
+	"version": "1.0.0",
+	"minAppVersion": "0.1.0",
+	"description": "Obsidian plugin for writing and working with scripts such as screenplays and comic scripts.",
+	"author": "Strye",
+	"authorUrl": "https://github.com/strye/obsidian-scripts",
+	"isDesktopOnly": false
+}

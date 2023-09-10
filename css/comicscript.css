@@ -1,0 +1,164 @@
+.csmd {
+	/* --test_color: rgb(137, 80, 181); */
+
+
+	--hga: var(--cb_slate); /*cb_slate*/
+	--hgb: var(--sotd_mustard); /*mg_bluegray*/
+	--hgc: var(--white); /*mg_bluegray*/
+	--hgd: var(--white); /*mg_greengray*/
+	--hg-com: var(--lt_purple); /*sw_violet*/
+
+	/*** HEADER STYLES ***/
+	/*** Page Marker ***/
+	--h1-color: var(--hga);
+	--h1-size: 1.3em;
+
+	/*** Panel Marker ***/
+	--h2-color: var(--hgb);
+	--h2-size: 1.2em;
+
+	/* x */
+	--h3-color: var(--hgc);
+	--h3-size: 1.0em;
+	--h3-font: var(--font-monospace);
+	--h3-variant: normal;
+
+	/* x */
+	--h4-color: var(--hgd);
+	--h4-size: 1.0em;
+	--h4-font: var(--font-monospace);
+	--h4-style: none;
+
+	/* x */
+	--h5-color: var(--hgd);
+	--h5-size: 1.0em;
+	--h5-font: var(--font-monospace);
+
+	/* x */
+	--h6-color: var(--hg-com);
+	--h6-size: 1.0em;
+	--h6-font: var(--font-monospace);
+	--h6-style: italic;
+	--h6-variant: small-caps;
+
+
+
+	
+	color: var(--white);
+	--font-text: "MonospaceTypewriter", "Underwood Champion", "Consolas" !important;
+	/* --font-text: "Underwood Champion", "Consolas" !important; */
+}
+
+
+/*** Reset Headers ***/
+.csmd .HyperMD-header-3:after, .markdown-preview-view h3:after,
+.csmd .HyperMD-header-5:after, .markdown-preview-view h5:after {
+	display: none;
+}
+
+/*** Page Marker # ***/
+.csmd .HyperMD-header-1:after, .markdown-preview-view h1:after {
+	background: var(--hga);
+}
+
+/*** Panel Marker ~ ## ***/
+/*** Panael Description ~ Normal Text ***/
+
+
+/*** Dialog ~ base formatting for quote block ***/
+.csmd .HyperMD-quote {
+	padding-left: 150px !important;
+	padding-bottom: 0.42em !important;
+	padding-right: 150px !important;
+	padding-top: 0.42em !important;
+	text-align: left;
+}
+.csmd .HyperMD-quote::before {
+	border-left: 0px !important;
+}
+
+/*** Character Cues ~ '>' ***/
+.csmd .HyperMD-quote:has(.cm-formatting-quote) {
+	text-indent: 100px !important;
+	color: var(--hgc);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/*** Parentheticals ~ strikethrough '*-*' ***/
+.csmd .HyperMD-quote:has(.cm-strikethrough) {
+	text-indent: 50px !important;
+}
+.csmd .HyperMD-quote .cm-strikethrough {
+	text-decoration: none !important;
+}
+
+
+
+/*** Artist Note ~ [^Art]: ***/
+/*** Dialog Letter Note ~ [^Ltr]: ***/
+/*** Script Note ~ [^|]:, [^Art]:, [^Ltr]: ***/
+.csmd .cm-content .HyperMD-footnote{
+	padding-left: 42px !important;
+	color: var(--hg-com);
+	font-size: 1em;
+	font-style: italic !important;
+	font-variant: small-caps;
+}
+
+
+/*** Letterer Note ~ [^L]: ***/
+/* .csmd .cm-content .HyperMD-footnote.HyperMD-quote {
+	padding-left: 175px !important;
+	padding-right: 150px !important;
+	color: var(--hg-com);
+	font-size: 1.0em;
+	font-style: italic !important;
+	font-variant: small-caps;
+} */
+
+
+/*** Personal Note ~ %%...%% ***/
+.csmd .cm-line:has(.cm-comment) {
+	padding-left: 75px !important;
+}
+.csmd .cm-line .cm-comment:not(.cm-comment-start, .cm-comment-end) {
+	color: var(--sotd_gray);
+}
+.csmd .cm-line .cm-comment-start, .spmd .cm-line .cm-comment-end {
+	color: var(--drk);
+}
+
+
+
+
+
+
+/*** Lettering Note ***/
+/* .csmd .HyperMD-header-5.cm-line, .markdown-preview-view h5 {
+	padding-left: 142px !important;
+	padding-bottom: 0.75em !important;
+}
+.csmd .HyperMD-header-5.cm-line + .cm-line, .markdown-preview-view h5 + div {
+	padding-left: 142px !important;
+	font-size: var(--h5-size);
+	color: var(--h5-color);
+} */
+
+/*** Artist Note ***/
+/* .csmd .HyperMD-header-4.cm-line, .markdown-preview-view h4 {
+	padding-left: 24px !important;
+	padding-bottom: 0.75em !important;
+}
+.csmd .HyperMD-header-4.cm-line + .cm-line, .markdown-preview-view h4 + div {
+	padding-left: 24px !important;
+	font-size: var(--h4-size);
+	color: var(--h4-color);
+} */
+
+/*** Personal Note ***/
+/* .csmd .HyperMD-header-6.cm-line, .markdown-preview-view h6 {
+	padding-left: 50% !important;
+	padding-bottom: 0.75em !important;
+	text-align: justify !important;
+} */
